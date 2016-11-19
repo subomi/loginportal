@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  		<meta charset="utf-8">
+		<title>theHub-beta </title>
+		<style type="text/css">
+			body {
+				overflow: hidden;
+			}
+			.container { 
+				width: 1170px;
+				margin: 0 auto;
+			}
+
+			.container img {
+				display: block;
+				margin: 2% auto; 
+				width: 50%;
+				height: 50%;
+			}
+
+			.container .betaTag {
+				width: 25%;
+				margin: 0 auto;		
+			}
+
+			.betaTag p {
+				font-size: 130%;
+				margin: 0;
+				color: black;
+				text-align: center;
+			}
+
+			form {
+				width: 40%;
+				margin: 5% auto;
+			}
+
+			form * {
+				display: block;
+				margin: 2% auto;
+				padding: 2%;
+				width: 80%;
+			}
+
+			form input[type="submit"] {
+				width: 30%;
+				border-radius: 5px 5px;
+				border: 0px solid black;
+				font-size: 16px;
+			}
+
+			form input[type="submit"]:hover {
+				background-color: rgb(13,93,166);
+				color: white; 
+				border: 0px;
+				cursor: pointer;
+			}
+
+			/* Setup Media Queries - Container */
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<img src="http://res.cloudinary.com/thehub/image/upload/v1479446857/construction_msplpz.jpg" />
+			<form action="/" method="POST" class="form-horizontal col-sm-6 col-sm-offset-3">
+					<input type="text" name="betaUsername" placeholder="Username">
+					<input type="password" name="betaPassword" placeholder="Password">
+					<input type="submit" class="center-block btn" value="Login"/>
+			</form>
+		</div>
+	</body>
+</html>
