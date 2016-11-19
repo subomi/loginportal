@@ -18,6 +18,7 @@ module.exports = [
 ```
 The users.js file exports an array of users containing their username and password.
 
+### Expressjs Example
 ```javascript
 var express = require('express');
 var portal = require('loginPortal')();
