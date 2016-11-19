@@ -36,7 +36,6 @@ function portal(args) {
 				// User authorized - set header & grant access - next();
 				var hashObject = Authorize.generate(username, password);
 				response.cookie(header,hashObject.hash) // {"expires": hashObject.expires});
-				response.end("Welcome continue to site");
 				return next();
 			} else {
 				// Username | password failed
@@ -54,7 +53,6 @@ function portal(args) {
 
 		// Test Passed - refresh timer
 		Authorize.refreshTimer(request.cookies[header]);
-		response.end("Welcome continue to site");
 		return next();	
 	}
 }
