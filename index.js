@@ -27,9 +27,9 @@ function portal(args) {
 
 		if(!request.cookies[header]) {
 		
-			if(!(username || password)) {
+			if(!username || !password) {
 				// Respond with portalBanner
-				response.send(portalBanner);
+				response.end(portalBanner);
 				return;
 			}
 			if(Authorize.authorizeUser(username, password)) {
@@ -40,12 +40,14 @@ function portal(args) {
 			} else {
 				// Username | password failed
 				response.end("Wrong username or password");
+				return;
 			}
 		}
 		
 		if(!Authorize.test(request)) {
 			// Probably request failed to be removed from header 
 			// remove header and respond with banner
+
 			response.clearCookie(header);
 			response.end(portalBanner);
 			return;
@@ -53,6 +55,7 @@ function portal(args) {
 
 		// Test Passed - refresh timer
 		Authorize.refreshTimer(request.cookies[header]);
+		
 		return next();	
 	}
 }
