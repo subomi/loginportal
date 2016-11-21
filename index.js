@@ -29,6 +29,7 @@ function portal(args) {
 		
 			if(!username || !password) {
 				// Respond with portalBanner
+				response.setHeader("Content-Type", "text/html");
 				response.end(portalBanner);
 				return;
 			}
@@ -49,6 +50,7 @@ function portal(args) {
 			// remove header and respond with banner
 
 			response.clearCookie(header);
+			response.setHeader("Content-Type", "text/html");
 			response.end(portalBanner);
 			return;
 		}
