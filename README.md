@@ -46,5 +46,8 @@ app.listen(8080);
 * It must be behind cookieParser and bodyParser.urlencoded in that order. 
 * Those modules are dependencies, but are not internally used as they are general modules used in nodejs express development.
 
+## TODO
+* loginportal page - mobile friendly view 
+
 ## LICENSE
 MIT
