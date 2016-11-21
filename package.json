@@ -1,6 +1,6 @@
 {
   "name": "loginportal",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A nodejs middleware showing a portal, for restricted login access",
   "main": "index.js",
   "scripts": {
